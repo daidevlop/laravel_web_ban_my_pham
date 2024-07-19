@@ -1,5 +1,39 @@
 @extends('client.layouts.partials.1header')
 <main>
+    <div id="alert" class="toast-container position-fixed top-0 end-0 p-3"></div>
+    <nav id="top">
+        <div class="container">
+            <div class="nav float-start">
+                <ul class="list-inline">
+                    <li class="list-inline-item">HOTLINE: <a href="">TRẦN ĐỨC ĐẠI</a> | <a
+                            href="tel:0865 160 360">0865 160 360</a></li>
+                </ul>
+            </div>
+            <div class="nav float-end">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <div class="dropdown">
+                            <a href class="dropdown-toggle" data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i>
+                                <span class="d-none d-md-inline">Tài khoản</span> <i
+                                    class="fa-solid fa-caret-down"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="{{route('register')}}"
+                                        class="dropdown-item">Đăng ký</a></li>
+                                <li><a href="{{route('login')}}" class="dropdown-item">Đăng
+                                        nhập</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="list-inline-item"><a href="https://www.flowercorner.vn?route=checkout/cart"
+                            title="Giỏ hàng"><i class="fa-solid fa-bag-shopping"></i> <span
+                                class="d-none d-md-inline">Giỏ hàng</span></a></li>
+                    <li class="list-inline-item"><a href="https://www.flowercorner.vn?route=checkout/checkout"
+                            title="Thanh toán"><i class="fa-solid fa-share"></i> <span class="d-none d-md-inline">Thanh
+                                toán</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container stk-menu">
         <nav id="menu" class="navbar navbar-expand-lg">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#narbar-menu"><i
@@ -80,15 +114,19 @@
                                 <ul class="list-unstyled">
                                     <li><a href="hoa-chuc-mung.html" class="nav-link">Hoa Chúc Mừng</a></li>
                                     <li><a href="hoa-cuoi-cam-tay.html" class="nav-link">Hoa Cưới Cầm Tay</a></li>
-                                    <li><a href="hoa-tang-le.html" class="nav-link">Hoa tang lễ - Hoa Chia Buồn</a></li>
+                                    <li><a href="hoa-tang-le.html" class="nav-link">Hoa tang lễ - Hoa Chia Buồn</a>
+                                    </li>
                                     <li><a href="hoa-tinh-yeu.html" class="nav-link">Hoa tình yêu</a></li>
                                     <li><a href="hoa-valentine.html" class="nav-link">Hoa Valentine</a></li>
-                                    <li><a href="hoa-ky-niem-ngay-cuoi.html" class="nav-link">Hoa Kỷ Niệm Ngày Cưới</a>
+                                    <li><a href="hoa-ky-niem-ngay-cuoi.html" class="nav-link">Hoa Kỷ Niệm Ngày
+                                            Cưới</a>
                                     </li>
                                     <li><a href="ngay-cua-me.html" class="nav-link">Ngày của mẹ</a></li>
                                     <li><a href="hoa-chuc-mung-8-3.html" class="nav-link">Hoa Chúc Mừng 8-3</a></li>
-                                    <li><a href="hoa-chuc-mung-20-10.html" class="nav-link">Hoa Chúc Mừng 20-10</a></li>
-                                    <li><a href="hoa-chuc-mung-ngay-nha-giao-viet-nam-20-11.html" class="nav-link">Ngày
+                                    <li><a href="hoa-chuc-mung-20-10.html" class="nav-link">Hoa Chúc Mừng 20-10</a>
+                                    </li>
+                                    <li><a href="hoa-chuc-mung-ngay-nha-giao-viet-nam-20-11.html"
+                                            class="nav-link">Ngày
                                             nhà giáo VN</a>
                                     </li>
                                     <li><a href="le-giang-sinh.html" class="nav-link">Giáng sinh</a></li>

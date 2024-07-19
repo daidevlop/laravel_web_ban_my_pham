@@ -14,7 +14,7 @@ class ProductClientController extends Controller
     public function index()
     {
         $products = DB::table('products')->limit(8)->get();
-        return view('client.layouts.home', compact('products'));
+        return view('client.home', compact('products'));
     }
 
     /**

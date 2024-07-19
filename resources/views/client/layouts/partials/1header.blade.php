@@ -18767,40 +18767,6 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ6PJ3GS" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
 
-    <div id="alert" class="toast-container position-fixed top-0 end-0 p-3"></div>
-    <nav id="top">
-        <div class="container">
-            <div class="nav float-start">
-                <ul class="list-inline">
-                    <li class="list-inline-item">HOTLINE: <a href="tel:1900633045">1900 633 045</a> | <a
-                            href="tel:0865 160 360">0865 160 360</a></li>
-                </ul>
-            </div>
-            <div class="nav float-end">
-                <ul class="list-inline">
-                    <li class="list-inline-item">
-                        <div class="dropdown">
-                            <a href class="dropdown-toggle" data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i>
-                                <span class="d-none d-md-inline">Tài khoản</span> <i
-                                    class="fa-solid fa-caret-down"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="https://www.flowercorner.vn?route=account/register"
-                                        class="dropdown-item">Đăng ký</a></li>
-                                <li><a href="https://www.flowercorner.vn?route=account/login" class="dropdown-item">Đăng
-                                        nhập</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="list-inline-item"><a href="https://www.flowercorner.vn?route=checkout/cart"
-                            title="Giỏ hàng"><i class="fa-solid fa-bag-shopping"></i> <span
-                                class="d-none d-md-inline">Giỏ hàng</span></a></li>
-                    <li class="list-inline-item"><a href="https://www.flowercorner.vn?route=checkout/checkout"
-                            title="Thanh toán"><i class="fa-solid fa-share"></i> <span class="d-none d-md-inline">Thanh
-                                toán</span></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
     <header>
         <div class="container">
             <div class="row">
@@ -18815,13 +18781,6 @@
                         <a href="https://www.instagram.com/flowercorner.vn/">
                             <i class="fa-brands fa-instagram fa-2xl"></i>
                         </a>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div id="logo">
-                        <a href="index.html"><img src="image/catalog/common/shop-hoa-tuoi-flowercorner-logo.png.webp"
-                                title="FlowerCorner.vn - Shop hoa tươi" alt="FlowerCorner.vn - Shop hoa tươi"
-                                class="img-fluid" width="300" height="62" /></a>
                     </div>
                 </div>
                 <div class="col-md-4 mt-2 hide-mobile">
