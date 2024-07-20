@@ -28,10 +28,10 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="list-inline-item"><a href="https://www.flowercorner.vn?route=checkout/cart"
+                    <li class="list-inline-item"><a href=""
                             title="Giỏ hàng"><i class="fa-solid fa-bag-shopping"></i> <span
                                 class="d-none d-md-inline">Giỏ hàng</span></a></li>
-                    <li class="list-inline-item"><a href="https://www.flowercorner.vn?route=checkout/checkout"
+                    <li class="list-inline-item"><a href=""
                             title="Thanh toán"><i class="fa-solid fa-share"></i> <span class="d-none d-md-inline">Thanh
                                 toán</span></a></li>
                 </ul>

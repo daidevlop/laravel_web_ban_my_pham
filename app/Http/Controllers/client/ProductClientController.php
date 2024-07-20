@@ -15,6 +15,7 @@ class ProductClientController extends Controller
     {
         $products = DB::table('products')->limit(8)->get();
         $stockProducts = DB::table('products')->where('stock','<',10)->orderByDesc('stock','asc')->limit(4)->get();
+        // dd($products, $stockProducts);
         return view('client.home', compact('products', 'stockProducts'));
     }
 

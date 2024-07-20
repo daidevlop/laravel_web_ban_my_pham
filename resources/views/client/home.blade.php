@@ -14,7 +14,7 @@
             <div class="col-md-3 col-sm-6 col-xs-6 mb-2">
                 <div class="product-thumb po-relative">
                     <div class="image p-relative">
-                        <a href="#">
+                        <a href="{{route('products-client.show',$stock->id)}}">
                             <img src="{{Storage::url('imgs/'.$stock->img)}}" width="261" height="326"
                                 alt="Endless Love" title="Endless Love" class="img-fluid lozad" />
                             <span class="percent-off-rounded">{{$stock->stock}}<br />Stock</span>
@@ -22,13 +22,13 @@
                     </div>
                     <div class="content">
                         <div class="description">
-                            <h3><a class="product-item-title" href="">{{$stock->name}}</a></h3>
+                            <h3><a class="product-item-title" href="{{route('products-client.show',$stock->id)}}">{{$stock->name}}</a></h3>
                             <div class="price">
                                 <span class="price-new">{{$stock->discount}}VND</span> <span class="price-old">{{$stock->price}}VND</span>
                             </div>
                         </div>
                         <div class="buynow-button text-center">
-                            <a href="san-pham/endless-love-6942.html">ĐẶT HÀNG</a>
+                            <a href="{{route('products-client.show',$stock->id)}}">Thêm vào giỏ hàng</a>
                         </div>
                     </div>
                     <input type="hidden" name="product_id" value="6942" />
@@ -45,20 +45,20 @@
             <div class="col-md-3 col-sm-6 col-xs-6 mb-2">
                 <div class="product-thumb po-relative">
                     <div class="image p-relative">
-                        <a href="">
+                        <a href="{{route('products-client.show',$item->id)}}">
                             <img src="{{ Storage::url('imgs/'.$item->img) }}" width="261" height="326" alt="">
                         </a>
                     </div>
                     <div class="content">
                         <div class="description">
-                            <h3><a class="product-item-title" href="san-pham/little-tana.html">{{ $item->name }}</a>
+                            <h3><a class="product-item-title" href="{{route('products-client.show',$item->id)}}">{{ $item->name }}</a>
                             </h3>
                             <div class="price">
                                 <span class="price-new">{{ $item->price }} VND</span>
                             </div>
                         </div>
                         <div class="buynow-button text-center">
-                            <a href="san-pham/little-tana.html">ĐẶT HÀNG</a>
+                            <a href="{{route('products-client.show',$item->id)}}">Thêm vào giỏ hàng</a>
                         </div>
                     </div>
                     <input type="hidden" name="product_id" value="" />
