@@ -23,16 +23,18 @@ class CarController extends Controller
         ->where('id_user',$id_user)
         ->select('cars.*', 'products.name as product_name', 'products.price as product_price','products.img as product_img')
         ->get();
+        $total = Car::where('id_user', $id_user)
+        ->sum('discount');
         // dd($data);
-        return view('client.car', compact('data'));
+        return view('client.car', compact('data','total'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function oderSuccess()
     {
-        
+        return view('client.oderSuccess');
     }
 
     /**

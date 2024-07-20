@@ -53,16 +53,16 @@
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-end"><strong>Tổng cộng</strong></td>
-
+                                <td>{{$total}}</td>
                             </tr>
                         </tfoot>
                     </table>
                 </div>
             </div>
             <div class="d-inline-block pt-2 pd-2 w-100">
-                <div class="float-start"><a href="https://www.flowercorner.vn?route=common/home" class="btn btn-light">Tiếp
+                <div class="float-start"><a href="{{route('products-client.index')}}" class="btn btn-light">Tiếp
                         tục mua sắm</a></div>
-                <div class="float-end"><a href="https://www.flowercorner.vn?route=checkout/checkout"
+                <div class="float-end"><a href="{{route('oderSuccess')}}"
                         class="btn btn-primary">Thanh toán</a></div>
             </div>
         </div>
