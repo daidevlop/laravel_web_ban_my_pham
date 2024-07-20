@@ -29,14 +29,14 @@
                                         <div class="input-group">
                                             <input type="text" name="quantity" value="1" size="1"
                                                 class="form-control"> <input type="hidden" name="key" value="27929">
-                                            <button type="submit"
+                                            {{-- <button type="submit"
                                                 formaction="https://www.flowercorner.vn?route=checkout/cart|edit"
                                                 data-bs-toggle="tooltip" title="Cập nhật" class="btn btn-success"><i
                                                     class="fa-solid fa-rotate"></i></button>
                                             <button type="submit"
                                                 formaction="https://www.flowercorner.vn?route=checkout/cart|remove"
                                                 data-bs-toggle="tooltip" title="Loại bỏ" class="btn btn-danger"><i
-                                                    class="fa-solid fa-circle-xmark"></i></button>
+                                                    class="fa-solid fa-circle-xmark"></i></button> --}}
                                         </div>
                                     </form>
                                 </td>

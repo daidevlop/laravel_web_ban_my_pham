@@ -28,7 +28,11 @@
                             </div>
                         </div>
                         <div class="buynow-button text-center">
-                            <a href="{{route('products-client.show',$stock->id)}}">Thêm vào giỏ hàng</a>
+                            <form action="{{route('car.store',$stock->id)}}" method="post">
+                                @csrf
+                                <input type="hidden" name="quantity" value="1">
+                                <button type="submit">Them vao gio hang</button>
+                            </form>
                         </div>
                     </div>
                     <input type="hidden" name="product_id" value="6942" />
@@ -58,7 +62,11 @@
                             </div>
                         </div>
                         <div class="buynow-button text-center">
-                            <a href="{{route('products-client.show',$item->id)}}">Thêm vào giỏ hàng</a>
+                            <form action="{{route('car.store',$item->id)}}" method="post">
+                                @csrf
+                                <input type="hidden" name="quantity" value="1">
+                                <button type="submit">Them vao gio hang</button>
+                            </form>
                         </div>
                     </div>
                     <input type="hidden" name="product_id" value="" />
