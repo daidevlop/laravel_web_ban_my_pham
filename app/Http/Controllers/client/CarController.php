@@ -4,19 +4,15 @@ namespace App\Http\Controllers\client;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class ProductClientController extends Controller
+class CarController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $products = DB::table('products')->limit(8)->get();
-        $stockProducts = DB::table('products')->where('stock','<',10)->orderByDesc('stock','asc')->limit(4)->get();
-        // dd($products, $stockProducts);
-        return view('client.home', compact('products', 'stockProducts'));
+        return view('client.car');
     }
 
     /**
@@ -38,9 +34,9 @@ class ProductClientController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id){
-        $detailProduct = DB::table('products')->where('id',$id)->first();
-        return view('client.detaileProduct',compact('detailProduct'));
+    public function show(string $id)
+    {
+        //
     }
 
     /**

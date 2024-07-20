@@ -28,7 +28,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="list-inline-item"><a href=""
+                    <li class="list-inline-item"><a href="{{route('car.index')}}"
                             title="Giỏ hàng"><i class="fa-solid fa-bag-shopping"></i> <span
                                 class="d-none d-md-inline">Giỏ hàng</span></a></li>
                     <li class="list-inline-item"><a href=""
