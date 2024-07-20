@@ -17,8 +17,10 @@ class CarController extends Controller
      */
     public function index()
     {
+        $id_user = Auth::id();
         $data = DB::table('cars')
         ->join('products', 'cars.id_product', '=', 'products.id')
+        ->where('id_user',$id_user)
         ->select('cars.*', 'products.name as product_name', 'products.price as product_price','products.img as product_img')
         ->get();
         // dd($data);
