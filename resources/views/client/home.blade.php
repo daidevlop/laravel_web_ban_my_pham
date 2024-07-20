@@ -30,6 +30,8 @@
                         <div class="buynow-button text-center">
                             <form action="{{route('car.store',$stock->id)}}" method="post">
                                 @csrf
+                                <input type="hidden" name="id_product" value="{{$stock->id}}">
+                                <input type="hidden" name="discount" value="{{$stock->discount}}">
                                 <input type="hidden" name="quantity" value="1">
                                 <button type="submit">Them vao gio hang</button>
                             </form>
@@ -64,6 +66,8 @@
                         <div class="buynow-button text-center">
                             <form action="{{route('car.store',$item->id)}}" method="post">
                                 @csrf
+                                <input type="hidden" name="id_product" value="{{$item->id }}">
+                                <input type="hidden" name="discount" value="{{$item->discount}}">
                                 <input type="hidden" name="quantity" value="1">
                                 <button type="submit">Them vao gio hang</button>
                             </form>

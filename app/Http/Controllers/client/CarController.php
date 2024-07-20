@@ -3,7 +3,12 @@
 namespace App\Http\Controllers\client;
 
 use App\Http\Controllers\Controller;
+use App\Models\admin\Product;
+use App\Models\Car;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class CarController extends Controller
 {
@@ -12,8 +17,12 @@ class CarController extends Controller
      */
     public function index()
     {
-        
-        return view('client.car');
+        $data = DB::table('cars')
+        ->join('products', 'cars.id_product', '=', 'products.id')
+        ->select('cars.*', 'products.name as product_name', 'products.price as product_price','products.img as product_img')
+        ->get();
+        // dd($data);
+        return view('client.car', compact('data'));
     }
 
     /**
@@ -21,7 +30,7 @@ class CarController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -29,7 +38,18 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $id_user = Auth::id();
+        $id_product=$request->id_product;
+        $discount=$request->discount;
+        $quantity=$request->quantity;
+        // dd($request);
+        Car::create([
+            'id_user'=>$id_user,
+            'id_product'=>$id_product,
+            'discount'=>$discount,
+            'quantity'=>$quantity,
+        ]);
+        return redirect()->back();
     }
 
     /**

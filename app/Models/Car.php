@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Car extends Model
 {
-    use HasFactory;
-    protected $timestamps = false;
+    // use HasFactory;
+    // protected $timestamps = true;
     protected $fillable = [
         'id_user',
         'id_product',
-        'price',
+        'discount',
         'quantity',
     ];
     

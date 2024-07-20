@@ -19,7 +19,7 @@ class RegisterController extends Controller
         $this->validate($request, [
             'name' => 'required|min:3',  
             'email'=>'required|email|unique:users',
-            'password' => 'required|min:6|confirmed',
+            'password' => 'required|min:6|',
         ]);
         // dd($request);
        $reg = DB::table('users')->insert([
