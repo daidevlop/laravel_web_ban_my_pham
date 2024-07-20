@@ -14,7 +14,8 @@ class ProductClientController extends Controller
     public function index()
     {
         $products = DB::table('products')->limit(8)->get();
-        return view('client.home', compact('products'));
+        $stockProducts = DB::table('products')->where('stock','<',10)->orderByDesc('stock','asc')->limit(4)->get();
+        return view('client.home', compact('products', 'stockProducts'));
     }
 
     /**
@@ -36,9 +37,9 @@ class ProductClientController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+        return view('client.detaileProduct');
     }
 
     /**

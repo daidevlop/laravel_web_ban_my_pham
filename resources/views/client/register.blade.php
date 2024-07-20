@@ -12,9 +12,12 @@
                     <div class="row mb-3 required">
                         <label for="input-firstname" class="col-sm-2 col-form-label">Họ tên</label>
                         <div class="col-sm-10">
-                            <input type="text" name="name" value placeholder="Họ tên" id="input-firstname"
-                                class="form-control" />
-                            <div id="error-firstname" class="invalid-feedback"></div>
+                            <input type="text" name="name" value placeholder="Họ tên" id="input-firstname" class="form-control" />
+                            <div>
+                                @error('name')
+                                    {{$message}} 
+                                @enderror
+                            </div>
                         </div>
                     </div>
                     <div class="row mb-3 required">
@@ -22,15 +25,17 @@
                         <div class="col-sm-10">
                             <input type="email" name="email" placeholder="E-mail" id="input-email"
                                 class="form-control" />
-                            <div id="error-email" class="invalid-feedback"></div>
+                            <div>@error('email')
+                                {{$message}}
+                            @enderror</div>
                         </div>
                     </div>
                     <div class="row mb-3 required">
                         <label for="input-telephone" class="col-sm-2 col-form-label">Điện thoại</label>
                         <div class="col-sm-10">
-                            <input type="tel" name="telephone" value placeholder="Điện thoại" id="input-telephone"
+                            <input type="tel" value placeholder="Điện thoại" id="input-telephone"
                                 class="form-control" />
-                            <div id="error-telephone" class="invalid-feedback"></div>
+                            <div></div>
                         </div>
                     </div>
                 </fieldset>
@@ -39,9 +44,13 @@
                     <div class="row mb-3 required">
                         <label for="input-password" class="col-sm-2 col-form-label">Mật khẩu</label>
                         <div class="col-sm-10">
-                            <input type="password" name="password" value placeholder="Mật khẩu" id="input-password"
+                            <input type="password" name="password" placeholder="Mật khẩu" id="input-password"
                                 class="form-control" />
-                            <div id="error-password" class="invalid-feedback"></div>
+                            <div>
+                                @error('password')
+                                    {{$message}} 
+                                @enderror
+                            </div>
                         </div>
                     </div>
                 </fieldset>

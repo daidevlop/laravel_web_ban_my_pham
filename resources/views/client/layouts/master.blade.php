@@ -4,10 +4,11 @@
     <nav id="top">
         <div class="container">
             <div class="nav float-start">
-                <ul class="list-inline">
-                    <li class="list-inline-item">HOTLINE: <a href="">TRẦN ĐỨC ĐẠI</a> | <a
-                            href="tel:0865 160 360">0865 160 360</a></li>
-                </ul>
+                @if (Auth::check())
+                    Xin chào: <p class="text-danger"> {{ Auth::user()->name }}</p>
+                @else
+                    Mời bạn đăng nhập
+                @endif
             </div>
             <div class="nav float-end">
                 <ul class="list-inline">
@@ -17,10 +18,13 @@
                                 <span class="d-none d-md-inline">Tài khoản</span> <i
                                     class="fa-solid fa-caret-down"></i></a>
                             <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="{{route('register')}}"
-                                        class="dropdown-item">Đăng ký</a></li>
-                                <li><a href="{{route('login')}}" class="dropdown-item">Đăng
-                                        nhập</a></li>
+                                <li><a href="{{ route('register') }}" class="dropdown-item">Đăng ký</a></li>
+                                <li><a href="{{ route('login') }}" class="dropdown-item">Đăng nhập</a></li>
+                                @if (Auth::check())
+                                    <li><a href="{{ route('logout') }}" class="dropdown-item">Đăng xuất</a></li>
+                                @else
+                                
+                                @endif
                             </ul>
                         </div>
                     </li>
@@ -40,32 +44,8 @@
                     class="fa-solid fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="narbar-menu">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item dropdown"><a href="hoa-chuc-mung-sinh-nhat.html"
-                            class="nav-link dropdown-toggle">Hoa
-                            Sinh Nhật</a>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-inner">
-                                <ul class="list-unstyled">
-                                    <li><a href="hoa-sinh-nhat-sang-trong.html" class="nav-link">Hoa Sinh Nhật Sang
-                                            Trọng</a></li>
-                                    <li><a href="hoa-sinh-nhat-gia-re.html" class="nav-link">Hoa Sinh Nhật Giá Rẻ</a>
-                                    </li>
-                                    <li><a href="hoa-tang-sinh-nhat-nguoi-yeu.html" class="nav-link">Hoa Tặng Sinh Nhật
-                                            Người Yêu</a>
-                                    </li>
-                                    <li><a href="hoa-tang-sinh-nhat-me.html" class="nav-link">Hoa Tặng Sinh Nhật Mẹ</a>
-                                    </li>
-                                    <li><a href="hoa-tang-sinh-nhat-ban.html" class="nav-link">Hoa Tặng Sinh Nhật
-                                            Bạn</a></li>
-                                    <li><a href="lang-hoa-dep-tang-sinh-nhat.html" class="nav-link">Lẵng Hoa Tặng Sinh
-                                            Nhật</a></li>
-                                    <li><a href="hoa-hong-tang-sinh-nhat.html" class="nav-link">Hoa Hồng Tặng Sinh
-                                            Nhật</a></li>
-                                    <li><a href="gio-hoa-sinh-nhat.html" class="nav-link">Giỏ hoa sinh nhật</a></li>
-                                </ul>
-                            </div>
-                            <a href="hoa-chuc-mung-sinh-nhat.html" class="see-all">Hiển thị tất cả Hoa Sinh Nhật</a>
-                        </div>
+                    <li class="nav-item dropdown"><a href="{{ route('products-client.index') }}"
+                            class="nav-link dropdown-toggle">Trang Chủ</a>
                     </li>
                     <li class="nav-item dropdown"><a href="hoa-khai-truong.html" class="nav-link dropdown-toggle">Hoa
                             Khai
