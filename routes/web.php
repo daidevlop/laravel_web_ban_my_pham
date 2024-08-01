@@ -21,3 +21,4 @@ route::get('logout', [LoginController::class,'logout'])->name('logout');
 
 route::resource('car', CarController::class);
 route::get('oder-success', [CarController::class,'oderSuccess'])->name('oderSuccess');
+

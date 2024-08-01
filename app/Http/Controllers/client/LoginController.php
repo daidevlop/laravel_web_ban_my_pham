@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\client;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -10,6 +11,9 @@ class LoginController extends Controller
 {
     public function login()
     {
+        // User::query()->find(4)->update([
+        //     'password'=>bcrypt('password')
+        // ]);
         return view('client.login');
     }
 
@@ -25,5 +29,8 @@ class LoginController extends Controller
     {
         Auth::logout();
         return redirect()->back();
+    }
+    public function verify($token){
+        $user = User::query()->where('email_verified_at',null)->where('user_id',$token);
     }
 }
