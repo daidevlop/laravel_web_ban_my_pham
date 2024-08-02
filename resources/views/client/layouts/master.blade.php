@@ -9,6 +9,9 @@
                 @else
                     Mời bạn đăng nhập
                 @endif
+                @if (Auth::check() && Auth::user()->email == "cut0266@gmail.com")
+                    <a  href="{{route('products-admin.index')}}"> | Vào trang admin</a>
+                @endif
             </div>
             <div class="nav float-end">
                 <ul class="list-inline">
@@ -23,16 +26,15 @@
                                 @if (Auth::check())
                                     <li><a href="{{ route('logout') }}" class="dropdown-item">Đăng xuất</a></li>
                                 @else
-                                
                                 @endif
                             </ul>
                         </div>
                     </li>
-                    <li class="list-inline-item"><a href="{{route('car.index')}}"
-                            title="Giỏ hàng"><i class="fa-solid fa-bag-shopping"></i> <span
-                                class="d-none d-md-inline">Giỏ hàng</span></a></li>
-                    <li class="list-inline-item"><a href=""
-                            title="Thanh toán"><i class="fa-solid fa-share"></i> <span class="d-none d-md-inline">Thanh
+                    <li class="list-inline-item"><a href="{{ route('car.index') }}" title="Giỏ hàng"><i
+                                class="fa-solid fa-bag-shopping"></i> <span class="d-none d-md-inline">Giỏ
+                                hàng</span></a></li>
+                    <li class="list-inline-item"><a href="" title="Thanh toán"><i class="fa-solid fa-share"></i>
+                            <span class="d-none d-md-inline">Thanh
                                 toán</span></a></li>
                 </ul>
             </div>

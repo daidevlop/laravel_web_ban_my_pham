@@ -17,7 +17,7 @@
             @endif
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Danh Sach San Pham</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Danh Sach Danh Muc</h6>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -26,33 +26,18 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Name</th>
-                                    <th>Image</th>
-                                    <th>Price</th>
-                                    <th>Discount</th>
-                                    <th>Stock</th>
-                                    <th>Description</th>
-                                    <th>Warranty Policy</th>
-                                    <th>Category</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tfoot>
-                                @foreach ($productAdmin as $v)
+                                @foreach ($category as $v)
                                     <tr>
                                         <td>{{ $v->id }}</td>
-                                        <td>{{ $v->name }}</td>
-                                        <td><img src="{{ Storage::url($v->img) }}" width="50" alt="">
-                                        </td>
-                                        <td>{{ $v->price }} VND</td>
-                                        <td>{{ $v->discount }} VND</td>
-                                        <td>{{ $v->stock }}</td>
-                                        <td>{{ $v->description }}</td>
-                                        <td>{{ $v->warranty_policy }}</td>
-                                        <td>{{ $v->category_id }}</td>
+                                        <td>{{ $v->name_category }}</td>
                                         <td class="d-flex">
                                             <a class="btn btn-success"
-                                                href="{{ route('products-admin.edit', $v->id) }}">Edit</a>
-                                            <form action="{{ route('products-admin.destroy', $v->id) }}" method="post">
+                                                href="{{ route('category-admin.edit', $v->id) }}">Edit</a>
+                                            <form action="{{ route('category-admin.destroy', $v->id) }}" method="post">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button onclick="return confirm('Ban co muon xoa khong?')" type="submit"
@@ -62,9 +47,8 @@
                                     </tr>
                                 @endforeach
                                 </tbody>
-
                         </table>
-                        {{ $productAdmin->links() }}
+                        {{ $category->links() }}
                     </div>
                 </div>
             </div>

@@ -28,7 +28,7 @@ class LoginController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect()->back();
+        return redirect()->route('products-client.index');
     }
     public function verify($token){
         $user = User::query()->where('email_verified_at',null)->where('user_id',$token);

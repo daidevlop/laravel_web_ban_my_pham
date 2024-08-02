@@ -33,7 +33,7 @@
                                 <input type="hidden" name="id_product" value="{{$stock->id}}">
                                 <input type="hidden" name="discount" value="{{$stock->discount}}">
                                 <input type="hidden" name="quantity" value="1">
-                                <button type="submit">Them vao gio hang</button>
+                                <button type="submit" style="{{ Auth::check() ? '' : 'display: none;' }}">Them vao gio hang</button>
                             </form>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                                 <input type="hidden" name="id_product" value="{{$item->id }}">
                                 <input type="hidden" name="discount" value="{{$item->discount}}">
                                 <input type="hidden" name="quantity" value="1">
-                                <button type="submit">Them vao gio hang</button>
+                                <button type="submit" style="{{ Auth::check() ? '' : 'display: none;' }}">Them vao gio hang</button>
                             </form>
                         </div>
                     </div>

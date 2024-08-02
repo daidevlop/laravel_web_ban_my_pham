@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\CategoryAdminController;
 use App\Http\Controllers\admin\ProductAdmintController;
 use App\Http\Controllers\client\CarController;
 use App\Http\Controllers\client\LoginController;
@@ -9,8 +10,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ProductClientController::class,'index']);
 
-Route::resource('products-admin', ProductAdmintController::class);
+Route::resource('products-admin', ProductAdmintController::class)->middleware('checkLogin');
 Route::resource('products-client', ProductClientController::class);
+
+Route::resource('category-admin',CategoryAdminController::class);
 
 route::get('register', [RegisterController::class,'register'])->name('register');
 route::post('post-register', [RegisterController::class,'postRegister'])->name('postRegister');
