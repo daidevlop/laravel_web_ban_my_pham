@@ -18,17 +18,10 @@ class OderController extends Controller
             ->join('users', 'cars.id_user', '=', 'users.id')
             ->select('cars.*', 'products.name as product_name', 'users.name as user_name')
             ->get();
-            dd($oder);
+        // dd($oder);
         return view('admin.donhang.index', compact('oder'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -43,15 +36,17 @@ class OderController extends Controller
      */
     public function show(string $id)
     {
-        //
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
-        //
+        $edit = DB::table('cars')
+            ->join('products', 'cars.id_product', '=', 'products.id')
+            ->join('users', 'cars.id_user', '=', 'users.id')
+            ->select('cars.*', 'products.name as product_name', 'users.name as user_name')
+            ->where('cars.id', $id)->first();
+        // $edit = DB::table('cars')->where('id', $id)->first();
+        // dd($edit);
+        return view('admin.donhang.edit', compact('edit'));
     }
 
     /**
@@ -59,14 +54,16 @@ class OderController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // $update = DB::table('cars')->where('id', $id)->first();
+        $request->validate([
+            'status' => ['required', 'string'],
+        ]);
+        DB::table('cars')->where('id', $id)->update([
+            'status' => $request->status,
+        ]);
+        return redirect()->route('oder.index')->with('success', 'Update thành công');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
-        //
     }
 }

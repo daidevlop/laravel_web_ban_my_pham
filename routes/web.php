@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\admin\CategoryAdminController;
+use App\Http\Controllers\admin\OderController;
 use App\Http\Controllers\admin\PayOnlineController;
 use App\Http\Controllers\admin\ProductAdmintController;
 use App\Http\Controllers\client\CarController;
@@ -35,3 +36,5 @@ route::get('oder-success', [CarController::class, 'oderSuccess'])->name('oderSuc
 
 Route::get('/vnpay', [VNPayController::class, 'createPayment'])->name('vnpay.create');
 Route::get('/vnpay-return', [VNPayController::class, 'returnPayment'])->name('vnpay.return');
+
+route::resource('oder',OderController::class);
