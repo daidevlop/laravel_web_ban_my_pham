@@ -15,7 +15,7 @@
                 <div class="product-thumb po-relative">
                     <div class="image p-relative">
                         <a href="{{route('products-client.show',$stock->id)}}">
-                            <img src="{{Storage::url('imgs/'.$stock->img)}}" width="261" height="326"
+                            <img src="{{Storage::url($stock->img)}}" width="261" height="326"
                                 alt="Endless Love" title="Endless Love" class="img-fluid lozad" />
                             <span class="percent-off-rounded">{{$stock->stock}}<br />Stock</span>
                         </a>
@@ -52,7 +52,7 @@
                 <div class="product-thumb po-relative">
                     <div class="image p-relative">
                         <a href="{{route('products-client.show',$item->id)}}">
-                            <img src="{{ Storage::url('imgs/'.$item->img) }}" width="261" height="326" alt="">
+                            <img src="{{ Storage::url($item->img) }}" width="261" height="326" alt="">
                         </a>
                     </div>
                     <div class="content">

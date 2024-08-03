@@ -11,7 +11,7 @@
                 <div class="row mb-3">
                     <div class="col-sm">
                         <div class="image magnific-popup">
-                            <a href=""><img src="{{Storage::url('imgs/'.$detailProduct->img) }}" title="Amour" alt="Amour" class="img-thumbnail mb-3" /></a>
+                            <a href=""><img src="{{Storage::url($detailProduct->img) }}" title="Amour" alt="Amour" class="img-thumbnail mb-3" /></a>
                         </div>
                     </div>
                     <div class="col-sm po-relative">

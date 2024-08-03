@@ -20,10 +20,10 @@
                                 <tr>
                                     <input type="hidden" class="cart-product-id" />
                                     <td class="text-center"> <a href=""><img width="50"
-                                                src="{{ Storage::url('imgs/' . $listcar->product_img) }}" /></a> </td>
+                                                src="{{ Storage::url($listcar->product_img) }}" /></a> </td>
                                     <td class="text-start text-wrap"><a class="cart-item-name"
                                             href="">{{ $listcar->product_name }}</a> </td>
-                                    <td class="text-start">{{$listcar->id}}</td>
+                                    <td class="text-start">{{ $listcar->id }}</td>
                                     <td class="text-start">
                                         <form method="post" data-oc-target="#shopping-cart">
                                             <div class="input-group">
@@ -53,17 +53,18 @@
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-end"><strong>Tổng cộng</strong></td>
-                                <td>{{$total}}</td>
+                                <td>{{ $total }}</td>
                             </tr>
                         </tfoot>
                     </table>
                 </div>
             </div>
             <div class="d-inline-block pt-2 pd-2 w-100">
-                <div class="float-start"><a href="{{route('products-client.index')}}" class="btn btn-light">Tiếp
+                <div class="float-start"><a href="{{ route('products-client.index') }}" class="btn btn-light">Tiếp
                         tục mua sắm</a></div>
-                <div class="float-end"><a href="{{route('oderSuccess')}}"
-                        class="btn btn-primary">Thanh toán</a></div>
+                <div class="float-end"><a href="{{ route('thanh-toan.index') }}" class="btn btn-primary">Thanh toán</a>
+                <div class="float-end"><a href="{{ route('vnpay.create') }}" class="btn btn-primary">Thanh toán Online</a>
+                </div>
             </div>
         </div>
     </div>

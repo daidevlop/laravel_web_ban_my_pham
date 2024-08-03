@@ -105,7 +105,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="{{route('account-admin.index')}}">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Danh sách tài khoản</span></a>
             </li>

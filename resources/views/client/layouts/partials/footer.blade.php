@@ -1,11 +1,13 @@
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger intent="WELCOME" chat-title="box_" agent-id="4e9847d6-dc32-4f97-944f-90b50413429a"
+    language-code="vi"></df-messenger>
 <footer>
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
                 <img class="mb-3 lozad" src="image/catalog/1px.webp"
                     data-src="https://8384f55340.vws.vegacdn.vn/image/catalog/common/shop-hoa-tuoi-flowercorner-logo.png.webp"
-                    width="255" height="53" alt="shop hoa Flowercorner.vn"
-                    title="shop hoa Flowercorner.vn">
+                    width="255" height="53" alt="shop hoa Flowercorner.vn" title="shop hoa Flowercorner.vn">
                 Hotline: 1900 633 045 - 0865 160 360
                 Email: <a href="cdn-cgi/l/email-protection.html" class="__cf_email__"
                     data-cfemail="d3a0b2bfb6a093b5bfbca4b6a1b0bca1bdb6a1fda5bd">[email&#160;protected]</a>
@@ -19,8 +21,8 @@
                     <div class="col-md-7">
                         <p>Tải ứng dụng ngay!</p>
                         <p>
-                            <a href="https://apps.apple.com/vn/app/flower-corner/id1476554359"><img
-                                    class="lozad" src="image/catalog/1px.webp"
+                            <a href="https://apps.apple.com/vn/app/flower-corner/id1476554359"><img class="lozad"
+                                    src="image/catalog/1px.webp"
                                     data-src="https://8384f55340.vws.vegacdn.vn/image/catalog/common/app/appstore.png.webp"
                                     width="139" height="35" alt="FlowerCorner trên app store"
                                     title="FlowerCorner trên app store"></a>
@@ -75,8 +77,8 @@
                                 class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram</a> </p>
                     <p><a href="https://www.linkedin.com/company/flowercorner/" rel="nofollow"> <i
                                 class="fa-brands fa-linkedin" aria-hidden="true"></i> Linkedin</a> </p>
-                    <p><a href="https://www.youtube.com/flowercorner" rel="nofollow"> <i
-                                class="fa-brands fa-youtube" aria-hidden="true"></i> Youtube</a> </p>
+                    <p><a href="https://www.youtube.com/flowercorner" rel="nofollow"> <i class="fa-brands fa-youtube"
+                                aria-hidden="true"></i> Youtube</a> </p>
                 </div>
             </div>
             <div class="col-sm-4">
@@ -103,8 +105,7 @@
             <div class="mt-tooltip">
                 <a class="phone1link" target="_blank" href="tel:1900633045">
                     <span class="mmt-button call">
-                        <svg id="Layer_1" data-name="Layer 1" viewbox="0 0 56.69 56.69"
-                            class="mmt-button__icon">
+                        <svg id="Layer_1" data-name="Layer 1" viewbox="0 0 56.69 56.69" class="mmt-button__icon">
                             <defs>
                                 <style>
                                     .cls-1 {
@@ -161,8 +162,7 @@
             <div class="mt-tooltip">
                 <a class="phone2link" target="_blank" href="tel:0865160360">
                     <span class="mmt-button call">
-                        <svg id="Layer_1" data-name="Layer 1" viewbox="0 0 56.69 56.69"
-                            class="mmt-button__icon">
+                        <svg id="Layer_1" data-name="Layer 1" viewbox="0 0 56.69 56.69" class="mmt-button__icon">
                             <defs>
                                 <style>
                                     .cls-1 {
@@ -226,7 +226,7 @@
                 e.dispatchEvent(new Event(t))
             },
             o = t => !(!t || "object" != typeof t) && (void 0 !== t.jquery && (t = t[0]), void 0 !== t
-            .nodeType),
+                .nodeType),
             r = t => o(t) ? t.jquery ? t[0] : t : "string" == typeof t && t.length > 0 ? document.querySelector(
                 t) : null,
             a = (t, e, i) => {
@@ -238,7 +238,7 @@
                     var l;
                     if (!new RegExp(s).test(a)) throw new TypeError(
                         `${t.toUpperCase()}: Option "${n}" provided type "${a}" but expected type "${s}".`
-                        )
+                    )
                 }))
             },
             l = t => !(!o(t) || 0 === t.getClientRects().length) && "visible" === getComputedStyle(t)
@@ -460,7 +460,7 @@
                     const n = M.get(t);
                     n.has(e) || 0 === n.size ? n.set(e, i) : console.error(
                         `Bootstrap doesn't allow more than one instance per element. Bound instance: ${Array.from(n.keys())[0]}.`
-                        )
+                    )
                 },
                 get: (t, e) => M.has(t) && M.get(t).get(e) || null,
                 remove(t, e) {
@@ -528,7 +528,7 @@
                     const e = W.getOrCreateInstance(this);
                     if ("string" == typeof t) {
                         if (void 0 === e[t] || t.startsWith("_") || "constructor" === t)
-                        throw new TypeError(`No method named "${t}"`);
+                            throw new TypeError(`No method named "${t}"`);
                         e[t](this)
                     }
                 }))
@@ -714,8 +714,10 @@
             }
             _addEventListeners() {
                 this._config.keyboard && j.on(this._element, "keydown.bs.carousel", (t => this._keydown(
-                    t))), "hover" === this._config.pause && (j.on(this._element, "mouseenter.bs.carousel", (
-                        t => this.pause(t))), j.on(this._element, "mouseleave.bs.carousel", (t => this
+                        t))), "hover" === this._config.pause && (j.on(this._element,
+                        "mouseenter.bs.carousel", (
+                            t => this.pause(t))), j.on(this._element, "mouseleave.bs.carousel", (t =>
+                        this
                         .cycle(t)))), this._config.touch && this._touchSupported && this
                     ._addTouchEventListeners()
             }
@@ -740,8 +742,9 @@
                 })), this._pointerEvent ? (j.on(this._element, "pointerdown.bs.carousel", (t => e(t))),
                     j.on(this._element, "pointerup.bs.carousel", (t => n(t))), this._element.classList
                     .add("pointer-event")) : (j.on(this._element, "touchstart.bs.carousel", (t => e(
-                    t))), j.on(this._element, "touchmove.bs.carousel", (t => i(t))), j.on(this._element,
-                        "touchend.bs.carousel", (t => n(t))))
+                    t))), j.on(this._element, "touchmove.bs.carousel", (t => i(t))), j.on(this
+                    ._element,
+                    "touchend.bs.carousel", (t => n(t))))
             }
             _keydown(t) {
                 if (/input|textarea/i.test(t.target.tagName)) return;
@@ -926,7 +929,7 @@
                 }));
                 const n = this._getDimension();
                 this._element.classList.remove(ct), this._element.classList.add(ht), this._element.style[
-                    n] = 0, this._addAriaAndCollapsedClass(this._triggerArray, !0), this
+                        n] = 0, this._addAriaAndCollapsedClass(this._triggerArray, !0), this
                     ._isTransitioning = !0;
                 const s = `scroll${n[0].toUpperCase() + n.slice(1)}`;
                 this._queueCallback((() => {
@@ -1230,7 +1233,7 @@
                 if (o && r) {
                     var h = function(t, e) {
                             return re("number" != typeof(t = "function" == typeof t ? t(Object
-                            .assign({}, e.rects, {
+                                .assign({}, e.rects, {
                                     placement: e.placement
                                 })) : t) ? t : ae(t, yt))
                         }(s.padding, i),
@@ -1304,8 +1307,8 @@
                     E = "clientHeight",
                     A = "clientWidth";
                 w === Wt(i) && "static" !== Yt(w = Gt(i)).position && "absolute" === a && (E = "scrollHeight",
-                        A = "scrollWidth"), w = w, s !== mt && (s !== bt && s !== _t || o !== Et) || (v = gt,
-                        m -= w[E] - n.height, m *= l ? 1 : -1), s !== bt && (s !== mt && s !== gt || o !==
+                    A = "scrollWidth"), w = w, s !== mt && (s !== bt && s !== _t || o !== Et) || (v = gt,
+                    m -= w[E] - n.height, m *= l ? 1 : -1), s !== bt && (s !== mt && s !== gt || o !==
                     Et) || (b = _t, f -= w[A] - n.width, f *= l ? 1 : -1)
             }
             var T, O = Object.assign({
@@ -1923,9 +1926,9 @@
                     y: 0
                 };
             return (n || !n && !i) && (("body" !== Rt(e) || we(r)) && (l = (s = e) !== Wt(s) && zt(s) ? {
-                    scrollLeft: (o = s).scrollLeft,
-                    scrollTop: o.scrollTop
-                } : ve(s)), zt(e) ? ((c = Vt(e)).x += e.clientLeft, c.y += e.clientTop) : r && (c.x = ye(
+                scrollLeft: (o = s).scrollLeft,
+                scrollTop: o.scrollTop
+            } : ve(s)), zt(e) ? ((c = Vt(e)).x += e.clientLeft, c.y += e.clientTop) : r && (c.x = ye(
                 r))), {
                 x: a.left + l.scrollLeft - c.x,
                 y: a.top + l.scrollTop - c.y,
@@ -2221,7 +2224,7 @@
                         .off(t, "mouseover", d))), this._popper && this._popper.destroy(), this._menu
                     .classList.remove(Je), this._element.classList.remove(Je), this._element
                     .setAttribute("aria-expanded", "false"), U.removeDataAttribute(this._menu,
-                    "popper"), j.trigger(this._element, "hidden.bs.dropdown", t))
+                        "popper"), j.trigger(this._element, "hidden.bs.dropdown", t))
             }
             _getConfig(t) {
                 if (t = {
@@ -2230,9 +2233,9 @@
                         ...t
                     }, a(Ue, t, this.constructor.DefaultType), "object" == typeof t.reference && !o(t
                         .reference) && "function" != typeof t.reference.getBoundingClientRect)
-                throw new TypeError(
+                    throw new TypeError(
                         `${Ue.toUpperCase()}: Option "reference" provided type "object" without a required "getBoundingClientRect" method.`
-                        );
+                    );
                 return t
             }
             _createPopper(t) {
@@ -2433,9 +2436,9 @@
             }
             hide(t) {
                 this._config.isVisible ? (this._getElement().classList.remove(gi), this._emulateAnimation((
-                () => {
-                    this.dispose(), _(t)
-                }))) : _(t)
+                    () => {
+                        this.dispose(), _(t)
+                    }))) : _(t)
             }
             _getElement() {
                 if (!this._element) {
@@ -2553,14 +2556,15 @@
                 this._isShown || this._isTransitioning || j.trigger(this._element, xi, {
                     relatedTarget: t
                 }).defaultPrevented || (this._isShown = !0, this._isAnimated() && (this
-                        ._isTransitioning = !0), this._scrollBar.hide(), document.body.classList.add(
-                    Pi), this._adjustDialog(), this._setEscapeEvent(), this._setResizeEvent(), j.on(this
-                        ._dialog, Ii, (() => {
-                            j.one(this._element, "mouseup.dismiss.bs.modal", (t => {
-                                t.target === this._element && (this
-                                    ._ignoreBackdropClick = !0)
-                            }))
-                        })), this._showBackdrop((() => this._showElement(t))))
+                    ._isTransitioning = !0), this._scrollBar.hide(), document.body.classList.add(
+                    Pi), this._adjustDialog(), this._setEscapeEvent(), this._setResizeEvent(), j.on(
+                    this
+                    ._dialog, Ii, (() => {
+                        j.one(this._element, "mouseup.dismiss.bs.modal", (t => {
+                            t.target === this._element && (this
+                                ._ignoreBackdropClick = !0)
+                        }))
+                    })), this._showBackdrop((() => this._showElement(t))))
             }
             hide() {
                 if (!this._isShown || this._isTransitioning) return;
@@ -2732,7 +2736,7 @@
                 this._isShown && (j.trigger(this._element, "hide.bs.offcanvas").defaultPrevented || (this
                     ._focustrap.deactivate(), this._element.blur(), this._isShown = !1, this
                     ._element.classList.remove($i), this._backdrop.hide(), this._queueCallback((
-                    () => {
+                        () => {
                             this._element.setAttribute("aria-hidden", !0), this._element
                                 .removeAttribute("aria-modal"), this._element.removeAttribute(
                                     "role"), this._element.style.visibility = "hidden", this
@@ -2774,7 +2778,7 @@
                     const e = Fi.getOrCreateInstance(this, t);
                     if ("string" == typeof t) {
                         if (void 0 === e[t] || t.startsWith("_") || "constructor" === t)
-                        throw new TypeError(`No method named "${t}"`);
+                            throw new TypeError(`No method named "${t}"`);
                         e[t](this)
                     }
                 }))
@@ -2791,7 +2795,8 @@
         })), j.on(window, "load.bs.offcanvas.data-api", (() => V.find(zi).forEach((t => Fi
             .getOrCreateInstance(t).show())))), R(Fi), g(Fi);
         const Ui = new Set(["background", "cite", "href", "itemtype", "longdesc", "poster", "src",
-                "xlink:href"]),
+                "xlink:href"
+            ]),
             Vi = /^(?:(?:https?|mailto|ftp|tel|file|sms):|[^#&/:?]*(?:[#/?]|$))/i,
             Ki =
             /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[\d+/a-z]+=*$/i,
@@ -2960,7 +2965,7 @@
                             ._enter(null, e) : e._leave(null, e)
                     } else {
                         if (this.getTipElement().classList.contains(sn)) return void this._leave(null,
-                        this);
+                            this);
                         this._enter(null, this)
                     }
             }
@@ -3023,7 +3028,8 @@
                 this._queueCallback((() => {
                     this._isWithActiveTrigger() || (this._hoverState !== on && t.remove(), this
                         ._cleanTipClass(), this._element.removeAttribute(
-                        "aria-describedby"), j.trigger(this._element, this.constructor.Event
+                            "aria-describedby"), j.trigger(this._element, this.constructor
+                            .Event
                             .HIDDEN), this._disposePopper())
                 }), this.tip, e), this._hoverState = ""
             }
@@ -3062,7 +3068,7 @@
             }
             _initializeOnDelegatedTarget(t, e) {
                 return e || this.constructor.getOrCreateInstance(t.delegateTarget, this
-                ._getDelegateConfig())
+                    ._getDelegateConfig())
             }
             _getOffset() {
                 const {
@@ -3372,9 +3378,9 @@
                     .forEach((t => {
                         V.prev(t, ".nav-link, .list-group-item").forEach((t => t.classList.add(
                             yn))), V.prev(t, ".nav-item").forEach((t => {
-                                V.children(t, ".nav-link").forEach((t => t.classList.add(
-                                    yn)))
-                            }))
+                            V.children(t, ".nav-link").forEach((t => t.classList.add(
+                                yn)))
+                        }))
                     })), j.trigger(this._scrollElement, "activate.bs.scrollspy", {
                         relatedTarget: t
                     })
@@ -3616,7 +3622,7 @@
                         t.load()
                     }
                     t.getAttribute("data-poster") && (t.poster = t.getAttribute("data-poster")), t.getAttribute(
-                            "data-src") && (t.src = t.getAttribute("data-src")), t.getAttribute(
+                        "data-src") && (t.src = t.getAttribute("data-src")), t.getAttribute(
                         "data-srcset") && t.setAttribute("srcset", t.getAttribute("data-srcset"));
                     var n = ",";
                     if (t.getAttribute("data-background-delimiter") && (n = t.getAttribute(
@@ -3904,13 +3910,14 @@
                 },
                 error: function() {
                     alert(
-                        "G\u1eedi y\u00eau c\u1ea7u kh\u00f4ng th\u00e0nh c\u00f4ng, vui l\u00f2ng li\u1ec7n h\u1ec7 qua facebook ho\u1eb7c hotline!")
+                        "G\u1eedi y\u00eau c\u1ea7u kh\u00f4ng th\u00e0nh c\u00f4ng, vui l\u00f2ng li\u1ec7n h\u1ec7 qua facebook ho\u1eb7c hotline!"
+                        )
                 }
             })
         });
         var a = (new URLSearchParams(window.location.search)).get("route");
         null != a && "checkout" === a.split("index.html")[0] || null !== sessionStorage.getItem(
-            "inquirySubmit") ||
+                "inquirySubmit") ||
             setTimeout(function() {
                 $("#inquirySubmit").modal("show");
                 sessionStorage.setItem("inquirySubmit", "yes")
@@ -4117,8 +4124,8 @@
                                 <div class="col-md-6 mb-6">
                                     <div class="mb-3">
                                         <label for="phone">Số điện thoại</label>
-                                        <input type="text" class="form-control" id="phone" placeholder
-                                            value required>
+                                        <input type="text" class="form-control" id="phone" placeholder value
+                                            required>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-6">
@@ -4145,4 +4152,5 @@
     </div>
 </div>
 </body>
+
 </html>
